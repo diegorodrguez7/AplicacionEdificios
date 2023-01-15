@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body class="bg-success p-2 text-white bg-opacity-25">
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+    <fieldset class="text-dark">
+        <legend class="border border-success bg-success p-2 text-dark bg-opacity-50"><h1>Introducir un edificio nuevo</h1></legend>
+        <b>Calle:</b><input class="form-control" type="text" id="calle" placeholder="Calle">
+        <b>Numero:</b><input class="form-control" type="text" id="numero" placeholder="Numero">
+        <b>CP:</b> <input class="form-control" type="text" id="cp" placeholder="Codigo Postal">
+        <b>Nº Plantas:</b><input class="form-control" type="number" id="nplantas" placeholder="Numero de plantas">
+        <b>Nº Puertas:</b><input class="form-control" type="number" id="npuertas" placeholder="Numero de puertas"><br>
+        <div class="d-grid gap-2">
+            <input type="button" class="btn btn-outline-success" id="addEdificio" value="Añadir Edificio">
+        </div><br>
+    </fieldset>
+        </div>
+        <div class="col">
+    <fieldset class="text-dark">
+        <legend class="border border-success bg-success p-2 text-dark bg-opacity-50"><h1>Añadir un propietario</h1></legend>
+        <b>Edificio:</b><input class="form-control" type="number" name="" id="nEdificio" placeholder="Numero de edificio"><br>
+        <b>Propietario:</b><input class="form-control" type="text" id="nombre" placeholder="Nombre Propietario"><br>
+        <b>Planta:</b><input class="form-control" type="number" name="" id="planta" placeholder="Numero de planta"><br>
+        <b>Puerta:</b><input class="form-control" type="number" name="" id="puerta" placeholder="Numero de puerta"><br>
+            <div class="d-grid gap-2">
+                <input type="button" class="btn btn-outline-success" id="addPropietario" value="Añadir Propietario">
+            </div>
+    </fieldset>
+        </div>
+    </div>
+    <hr style="color:black;">
+    <div class="row">
+        <div class="col mb-5">
+            <textarea id="resultado" cols="90" rows="12" class="form-control" aria-label="With textarea" readonly placeholder="AQUI SE MOSTRARAN CON EL NOMBRE DE PROPIETARIOS(cuando los añadas)" style="resize: none; border: 5px solid rgb(98, 176, 129); font-weight: 800;"></textarea>
+        </div>
+        <div class="col mb-5">
+            <div class="d-grid gap-2">
+                <input type="button" class="btn btn-outline-success" onclick="cambiarContenidoCelda()" value="Modificar datos">
+            </div>
+            <div id="resultado2" class="text-dark h-100 bg-light" style="border: 5px solid rgb(98, 176, 129); font-weight: 800;">
+                <h5>AQUI SE MOSTRARA UNA TABLA DE LOS EDIFICIOS CONSTRUIDOS PARA MODIFICAR DINAMICAMENTE SUS DATOS</h5>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="ClaseEdificio.js"></script>
+<script src="edificio.js"></script>
+</body>
+
+</html>
